@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'RussoOne';
+    src: url(fonts/RussoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url(fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Siemreap';
+    src: url(fonts/Siemreap-Regular.ttf);
+    unicode-range: U+0028-0039;
+}
+
+@font-face {
+    font-family: 'Simonetta';
+    src: url(fonts/Simonetta-Black.ttf);
+}
+
+#bg1 {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 27%;
+}
+
+#bg2 {
+    position: fixed;
+    bottom: -10px;
+    left: 0px;
+    width: 33%;
+}
+
+@media screen and (max-width: 1028px) {
+    #bg2 {
+        display: none;
+    }
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FAFAFA;
+}
+
+header {
+    margin-bottom: 6em;
+}
+
+h1 {
+    font-size: 75px;
+    text-align: center;
+    font-family: Simonetta;
+    color: #F06292;
+    margin-top: 1.2em;
+    margin-bottom: 0;
+}
+
+.tagline {
+    margin-top: 1em;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Siemreap', 'Noto Sans';
+    color: #6A6A6A;
+    letter-spacing: .5px;
+}
+
+h2 {
+    font-family: RussoOne;
+    color: #868686;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#main {
+    display: block;
+    margin: auto;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 400px;
+    padding: 0 1em;
+}
+
+section {
+    text-align: left;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    position: relative;
+    vertical-align: top;
+    padding-left: 26px;
+    margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 1028px) {
+    #main {
+        text-align: center;
+        padding-left: 9%;
+        
+    }
+    .column {
+        padding: 0 3em;
+    }
+}
+
+
+
+section::before {
+    position: absolute;
+    top: 5px;
+    bottom: 0px;
+    left: 0px;
+    content: '';
+    width: 6px;
+    background: #D4D4D4;
+    border-radius: 5px;
+}
+
+section li {
+    font-size: 14px;
+    font-family: 'Siemreap', 'Noto Sans';
+    letter-spacing: .5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    list-style-type: none;
+    position: relative;
+    font-weight: normal;
+    color: #868686;
+}
+
+li::before {
+    content: '•';
+    position: absolute;
+    top: 2px;
+    left: -1em;          /* Adjust this value so that it appears where you want. */
+    font-size: 1em;      /* Adjust this value so that it appears what size you want. */
+}
+
+li.green {
+    color: #209393;
+}
